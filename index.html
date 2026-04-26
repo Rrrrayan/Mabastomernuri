@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta property="og:title" content="Mabast Omer Nuri — IT/Network Specialist" />
+    <meta property="og:description" content="5+ years IT &amp; Network Specialist — Fiber Optics, ONT, Networking, Kalar Kurdistan." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#2F2FE4" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Mabast Omer Nuri — IT/Network Specialist</title>
+    <meta name="description" content="Professional portfolio of Mabast Omer Nuri, IT & Network Specialist based in Kalar, Kurdistan, Iraq." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🔷</text></svg>" />
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Network Canvas -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- ─── NAVIGATION ───────────────────────────────────── -->
+    <nav>
+        <a href="#hero" class="nav-logo">MON<span style="color:var(--accent)">.</span>IT</a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div style="display:flex;align-items:center;gap:1rem;">
+            <div class="theme-toggle" id="themeToggle" title="Toggle theme"></div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ─────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+        <!-- Glow blobs -->
+        <div class="glow-blob" style="width:500px;height:500px;background:rgba(47,47,228,0.12);top:-100px;left:-150px;"></div>
+        <div class="glow-blob" style="width:400px;height:400px;background:rgba(0,240,255,0.07);bottom:0;right:-100px;animation-delay:3s;"></div>
+
+        <div class="hero-content">
+            <!-- Text -->
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="dot"></span> Available for opportunities
+                </div>
+
+                <h1 class="hero-name">
+                    Mabast
+                    <span class="glitch" data-text="Omer Nuri">Omer Nuri</span>
+                </h1>
+
+                <div class="hero-title">
+                    <span id="typewriter"></span><span class="type-cursor"></span>
+                </div>
+
+                <p class="hero-bio">
+
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3-8.59 2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>                            Hire Me
+                        </a>
+                        <a href="assets/img/mabast.pdf" download="Mabast_Omer_Nuri_CV.pdf" class="btn-download" title="Download CV as PDF">
+                            <span class="dl-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </span> Download CV
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-val="5" data-sfx="+">0+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-val="4" data-sfx="">0</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-val="4" data-sfx="+">0+</span>
+                            <span class="stat-label">Roles Held</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-val="100" data-sfx="%">0%</span>
+                            <span class="stat-label">Committed</span>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="hero-visual">
+                <div class="profile-ring-container">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <!-- orbit dots -->
+                    <div class="orbit-dot" style="background:var(--accent);box-shadow:0 0 10px var(--accent);width:10px;height:10px;border-radius:50%;position:absolute;top:50%;left:50%;"></div>
+                    <div class="orbit-dot" style="background:var(--accent2);box-shadow:0 0 10px var(--accent2);width:8px;height:8px;border-radius:50%;position:absolute;top:50%;left:50%;"></div>
+                    <div class="orbit-dot" style="background:var(--primary);box-shadow:0 0 10px var(--primary);width:6px;height:6px;border-radius:50%;position:absolute;top:50%;left:50%;"></div>
+
+                    <div class="profile-img-wrap">
+                        <img src="assets/img/mabast.jpg" alt="Mabast Omer Nuri — IT/Network Specialist" class="profile-photo" width="320" height="320" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                        <div class="profile-avatar" style="display:none;align-items:center;justify-content:center;">👨‍💻</div>
+                    </div>
+                </div>
+
+                <!-- Location tag -->
+                <div style="position:absolute;bottom:-20px;right:-10px;background:var(--card-bg);border:1px solid var(--glass-border);border-radius:100px;padding:0.5rem 1rem;display:flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-muted);backdrop-filter:blur(10px);">
+                    <span style="color:var(--accent);">📍</span> Kalar, Kurdistan, Iraq
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">scroll</span>
+        </div>
+    </section>
+
+    <!-- ─── ABOUT ─────────────────────────────────────────── -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">// whoami</span>
+                <h2 class="section-title">About <span class="hl">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p>
+                        I'm <strong style="color:var(--primary)">Mabast Omer Nuri</strong>, an IT and Network Specialist based in Kalar, Kurdistan Region of Iraq. With over 5 years of hands-on experience, I've built a strong foundation in managing complex
+                        technical infrastructure across multiple industries.
+                    </p>
+                    <p>
+                        My expertise spans computer networking, fiber optic systems, ONT configuration, device management, and customer-facing technical support. I take pride in writing detailed technical documentation and delivering reliable, end-to-end infrastructure solutions.
+                    </p>
+                    <p>
+                        Beyond technical work, I've also held roles in HR, public relations, teaching, and sales — giving me a well-rounded professional perspective and strong communication skills across diverse environments.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Date of Birth</span>
+                            <span class="info-value">17 November 1996</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Kalar - Jutiran, Kurdistan</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">0770 126 4886</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value" style="font-size:0.8rem;">mabast.solaey@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <span class="info-label" style="display:block;margin-bottom:0.75rem;">Languages Spoken</span>
+                        <div class="languages-row">
+                            <span class="lang-badge">🇮🇶 Kurdish (Native)</span>
+                            <span class="lang-badge">🇬🇧 English</span>
+                            <span class="lang-badge">🇸🇦 Arabic</span>
+                            <span class="lang-badge">🇮🇷 Persian</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminal Card -->
+                <div class="terminal-card reveal-right">
+                    <div class="terminal-header">
+                        <div class="t-dot t-dot-r"></div>
+                        <div class="t-dot t-dot-y"></div>
+                        <div class="t-dot t-dot-g"></div>
+                        <span class="t-title">system_profile.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="t-line">
+                            <span class="prompt">$ </span>
+                            <span class="cmd">cat /etc/profile.d/mabast.conf</span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="key">NAME</span> = <span class="val">"Mabast Omer Nuri"</span></span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="key">ROLE</span> = <span class="val">"IT / Network Specialist"</span></span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="key">EXP</span> = <span class="val">"5+ Years"</span></span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="key">LOC</span> = <span class="val">"Kalar, Kurdistan, IQ"</span></span>
+                        </div>
+                        <div class="t-line" style="margin-top:0.5rem;">
+                            <span class="prompt">$ </span>
+                            <span class="cmd">ping -c 1 mabast.tech</span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output" style="color:#28c840;">PING success — 0ms latency ✓</span>
+                        </div>
+                        <div class="t-line" style="margin-top:0.5rem;">
+                            <span class="prompt">$ </span>
+                            <span class="cmd">skills --list --verbose</span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="val">networking</span>, <span class="val">fiber-optic</span>, <span class="val">ONT</span></span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="val">C#</span>, <span class="val">Java</span>, <span class="val">SQL</span>, <span class="val">MySQL</span></span>
+                        </div>
+                        <div class="t-line">
+                            <span class="output"><span class="val">Microsoft Office</span>, <span class="val">Linux</span>, <span class="val">Windows</span></span>
+                        </div>
+                        <div class="t-line" style="margin-top:0.5rem;">
+                            <span class="prompt">$ </span><span class="t-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SKILLS ─────────────────────────────────────────── -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">// capabilities</span>
+                <h2 class="section-title">Technical <span class="hl">Skills</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Networking -->
+                <div class="skill-category-card reveal delay-1">
+                    <span class="skill-cat-icon">🌐</span>
+                    <div class="skill-cat-title">NETWORKING & INFRASTRUCTURE</div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Computer Networking</span>
+                            <span class="skill-pct">92%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Fiber Optic & ONT Systems</span>
+                            <span class="skill-pct">88%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Network Administration</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Hardware Setup & Repair</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category-card reveal delay-2">
+                    <span class="skill-cat-icon">💻</span>
+                    <div class="skill-cat-title">PROGRAMMING & DATABASES</div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">C#</span>
+                            <span class="skill-pct">75%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-pct">70%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">SQL / MySQL</span>
+                            <span class="skill-pct">78%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="78"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Microsoft Office Suite</span>
+                            <span class="skill-pct">95%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="95"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OS & Tools -->
+                <div class="skill-category-card reveal delay-3">
+                    <span class="skill-cat-icon">⚙️</span>
+                    <div class="skill-cat-title">OS & APPLICATION KNOWLEDGE</div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Windows (All versions)</span>
+                            <span class="skill-pct">96%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="96"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Linux / Ubuntu</span>
+                            <span class="skill-pct">72%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="72"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Device Configuration & Testing</span>
+                            <span class="skill-pct">91%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="91"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-item-header">
+                            <span class="skill-name">Technical Report Writing</span>
+                            <span class="skill-pct">88%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-pct="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category-card reveal delay-4">
+                    <span class="skill-cat-icon">🧠</span>
+                    <div class="skill-cat-title">SOFT SKILLS</div>
+                    <div class="soft-skills-wrap">
+                        <div class="soft-tag"><span>Problem Solving</span></div>
+                        <div class="soft-tag"><span>Decision Making</span></div>
+                        <div class="soft-tag"><span>Leadership</span></div>
+                        <div class="soft-tag"><span>Teamwork</span></div>
+                        <div class="soft-tag"><span>Time Management</span></div>
+                        <div class="soft-tag"><span>Communication</span></div>
+                        <div class="soft-tag"><span>Customer Service</span></div>
+                        <div class="soft-tag"><span>Public Relations</span></div>
+                        <div class="soft-tag"><span>Teaching & Mentoring</span></div>
+                        <div class="soft-tag"><span>Recruitment Support</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ────────────────────────────────────── -->
+    <section id="experience">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">// work_history</span>
+                <h2 class="section-title">Work <span class="hl">Experience</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Current -->
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-period">September 2023 – Present &nbsp;·&nbsp; <span style="color:var(--accent);">Current</span></div>
+                        <div class="tl-role">Teacher & Lecturer</div>
+                        <div class="tl-company">🏫 Garmian Non-Governmental Institute, Kalar</div>
+                        <ul class="tl-bullets">
+                            <li>Delivering IT and technology-related courses to students across different levels.</li>
+                            <li>Developing curriculum materials and practical lab exercises for hands-on learning.</li>
+                            <li>Mentoring students in computer networking, hardware, and software fundamentals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HR -->
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-period">September 2023 – November 2023</div>
+                        <div class="tl-role">HR Assistant & Public Relations</div>
+                        <div class="tl-company">🏭 Shyaw Factory, Kalar</div>
+                        <ul class="tl-bullets">
+                            <li>Managed employee records and supported full-cycle recruitment processes.</li>
+                            <li>Developed positive public relations through strategic communication channels.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- OPT IQ -->
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-period">April 2019 – August 2023 &nbsp;·&nbsp; 4+ Years</div>
+                        <div class="tl-role">Technical Specialist</div>
+                        <div class="tl-company">🔧 OPT IQ, Kalar</div>
+                        <ul class="tl-bullets">
+                            <li>Upgraded and assigned devices across network infrastructure; monitored systems for performance and reliability.</li>
+                            <li>Authored comprehensive daily technical reports for management and teams.</li>
+                            <li>Supported installation teams with fiber optic deployments and ONT system configuration.</li>
+                            <li>Configured and tested networking devices while providing first-class customer support in the interface showroom.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AP Company -->
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-period">July 2018</div>
+                        <div class="tl-role">Sales Associate</div>
+                        <div class="tl-company">📱 AP Company, Kalar</div>
+                        <ul class="tl-bullets">
+                            <li>Excelled in customer service, sales, and technical support in a mobile phone retail environment.</li>
+                            <li>Managed inventory and provided expert troubleshooting for a wide range of devices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-period">July 2017 – September 2017 &nbsp;·&nbsp; Internship</div>
+                        <div class="tl-role">IT & Network Systems Intern</div>
+                        <div class="tl-company">🎓 QAYWAN Institute, Sulaymaniyah</div>
+                        <ul class="tl-bullets">
+                            <li>Completed 3 months of intensive training in IT and network systems under professional supervision.</li>
+                            <li>Gained practical experience in infrastructure setup, configuration, and maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─── EDUCATION ─────────────────────────────────────── -->
+    <section id="education" style="background:linear-gradient(180deg,transparent,var(--void2) 30%,var(--void2) 70%,transparent);">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">// education</span>
+                <h2 class="section-title">Academic <span class="hl">Background</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="edu-grid">
+                <div class="edu-card reveal delay-1">
+                    <span class="edu-icon">🎓</span>
+                    <div class="edu-degree">Bachelor in Information Technology</div>
+                    <div class="edu-school">Polytechnic University, Sulaymaniyah</div>
+                    <div class="edu-period">October 2014 – July 2018</div>
+                    <div class="edu-desc">
+                        Specialized in <strong style="color:var(--primary)">Computer Network Administration and Management</strong>. Studied software and hardware engineering, network architecture, database systems, and programming languages including
+                        C#, Java, and SQL.
+                    </div>
+                </div>
+
+                <div class="edu-card reveal delay-2">
+                    <span class="edu-icon">🔬</span>
+                    <div class="edu-degree">IT & Network Systems Training</div>
+                    <div class="edu-school">QAYWAN Institute, Sulaymaniyah</div>
+                    <div class="edu-period">July 2017 – September 2017</div>
+                    <div class="edu-desc">
+                        3-month structured internship in IT and network systems under professional supervision. Covered hands-on infrastructure deployment, device configuration, and real-world network troubleshooting.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ───────────────────────────────────────── -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">// get_in_touch</span>
+                <h2 class="section-title">Let's <span class="hl">Connect</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="reveal-left">
+                    <div class="contact-info-title">Ready to build something great?</div>
+                    <div class="contact-info-desc">
+                        Whether you're looking for an IT specialist, a network engineer, or a technical consultant — I'm available and ready to bring value to your team or project. Let's talk.
+                    </div>
+
+                    <div class="contact-items">
+                        <a href="tel:+9647701264886" class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Phone</span>
+                                <span class="contact-item-value">+964 770 126 4886</span>
+                            </div>
+                        </a>
+                        <a href="mailto:mabast.solaey@gmail.com" class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Email</span>
+                                <span class="contact-item-value">mabast.solaey@gmail.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item" style="cursor:default;">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-value">Kalar – Jutiran, Kurdistan, Iraq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-title">Find me on social media</div>
+                    <div class="social-icons-3d">
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/9647701264886" target="_blank" rel="noopener" class="si3d si3d-whatsapp" aria-label="WhatsApp">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">WhatsApp</div>
+                        </a>
+
+                        <!-- Gmail -->
+                        <a href="mailto:mabast.solaey@gmail.com" class="si3d si3d-gmail" aria-label="Gmail">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">Gmail</div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mabast.shexa.12?igsh=dTh5Y2YxdmdxOGp3" target="_blank" rel="noopener" class="si3d si3d-instagram" aria-label="Instagram">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">Instagram</div>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1CtM1AVhQd/?mibextid=wwXIfr" target="_blank" rel="noopener" class="si3d si3d-facebook" aria-label="Facebook">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">Facebook</div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/mabast-omer-375509203?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="si3d si3d-linkedin" aria-label="LinkedIn">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">LinkedIn</div>
+                        </a>
+
+                        <!-- Telegram -->
+                        <a href="@MabastO" target="_blank" rel="noopener" class="si3d si3d-telegram" aria-label="Telegram">
+                            <div class="si3d-face si3d-front">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </div>
+                            <div class="si3d-shine"></div>
+                            <div class="si3d-label">Telegram</div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal-right">
+                    <div class="contact-form">
+                        <div class="form-title">📡 Send a Message</div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-input" placeholder="John Doe" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="you@example.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-input" placeholder="Let's work together..." required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-textarea" placeholder="Describe your project or inquiry..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">SEND MESSAGE →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────────────── -->
+    <footer>
+        <div class="footer-copy">
+            &copy; 2025 <span>Mabast Omer Nuri</span>. All rights reserved.
+        </div>
+        <div class="footer-copy" style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="color:var(--accent);">◆</span> IT & Network Specialist &mdash; Kalar, Kurdistan
+            <span style="color:var(--accent);">◆</span>
+        </div>
+        <div class="footer-copy">
+            Built with <span>♥</span> &amp; code
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
